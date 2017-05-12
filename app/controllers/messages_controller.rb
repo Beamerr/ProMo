@@ -3,11 +3,12 @@ class MessagesController < ApplicationController
 	before_action :set_conversation
 
 	def index
+		@neo = User.find_by_id(3)
 		if current_user == @conversation.sender || current_user == @conversation.recipient
 			@other = current_user == @conversation.sender ? @conversation.recipient : @conversation.sender
 			@messages = @conversation.messages.order("created_at DESC")
 		else
-			redirect_to conversation_path, alert: "You don't have permission to view this."
+			redirect_to conversations_path, alert: "You don't have permission to view this."
 		end
 	end
 
