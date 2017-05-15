@@ -1,3 +1,4 @@
+
 <div class="row">
 	<div class="col-md-12">
 
@@ -21,13 +22,12 @@
 									<% end %>
 								</div>
 							<% end %>
-							<% end %>
+						<% end %>
 					<% end %>		
 				</div>
 			</div>
 		</div>
 		<h3>Send Message</h3>
-			
 			   <% if @users != current_user %>
 			  	<% if current_user.is_admin? %>
 			  		<%= @users.email %>
@@ -37,6 +37,5 @@
 				  <% end %>
 				  <br>
 			  <% end %>
-		  
 	</div>	
 </div>

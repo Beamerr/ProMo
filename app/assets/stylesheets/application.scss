@@ -44,21 +44,18 @@ of those sections to manage the look and feel of the site. */
 
 .about-section {
     height: 100%;
-    padding-top: 150px;
     text-align: center;
     background: #eee;
 }
 
 .services-section {
     height: 100%;
-    padding-top: 150px;
     text-align: center;
     background: #fff;
 }
 
 .contact-section {
     height: 100%;
-    padding-top: 150px;
     text-align: center;
     background: #eee;
 }
@@ -77,5 +74,16 @@ of those sections to manage the look and feel of the site. */
 }
 
 #convo {
-    max-width: 800px;
+    position: relative;
+    margin-left: auto;
+    margin-right: 30px;
+    text-align: center;
+    float: top;
 }
+
+#contact #convo {
+    bottom: 0px;
+}
+
+
+
