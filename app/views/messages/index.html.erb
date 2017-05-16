@@ -15,16 +15,23 @@
 
 			<div class="panel-body">
 				<div class="container">
+						
 						<%= form_for [@conversation, @conversation.messages.new], remote: true do |f| %>
+							
 							<div class="form-group" id="textbox">
 								<%= f.text_field :content, placeholder: "Press enter to send", class: "form-control" %>
 							</div>
+							
 							<%= f.hidden_field :user_id, value: current_user.id %>
 
 							<div class="actions">
 								<%= f.submit "Send Message", class: "btn btn-primary" %>
 							</div>
+						
 						<% end %>
+
+						
+						
 				
 				</div>
 

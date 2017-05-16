@@ -5,7 +5,12 @@ class PagesController < ApplicationController
   	  if !@conversations.nil?
 	      @users = User.all
 	      @conversations = Conversation.involving(current_user)
-      end
+	    end
     end
-  end 
+
+    redirect_to documents_path
+  end
+
+
+  	
 end
