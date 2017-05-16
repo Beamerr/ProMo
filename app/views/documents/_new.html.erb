@@ -1,17 +1,32 @@
-<div class="page-header"><h1>My Work</h1></div>
+<div class="page-header"><h1>Upload Photo</h1></div>
 
-<%= form_for @document do |f| %>
-  <%= render @errors, object: @document %>
+<%= form_for @document, html: { multipart: true } do |f| %>
+  <% if @document.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= "#{pluralize(@document.errors.count, "error")} prohibited this document from being saved:" %>
+      </h2>
+      <ul>
+        <% @document.errors.full_messages.each do |msg| %>
+          <li>
+            <%= msg %>
+          </li>
+          <% end %>
+      </ul>
+    </div>
+  <% end %>
 
   <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title, class: 'form-control' %>
+    <%= text_field :title, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= f.label :doc %>
+    <%= f.label :document %>
     <%= f.file_field :doc, class: 'form-control' %>
   </div>
 
-  <%= f.submit 'Upload', class: 'btn btn-primary' %>
+  <div class="form-group">
+        <%= f.submit 'Upload Photo', class: 'btn btn-default' %>
+    </div>
 <% end %>

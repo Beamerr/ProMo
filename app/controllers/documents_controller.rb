@@ -4,16 +4,16 @@ class DocumentsController < ApplicationController
 	end
 
 	def new
-		@documents = Document.new
+		@document = Document.new
 	end
 
 	def create
-		@document = Document.new(photo_params)
-		if @photo.save
+		@document = Document.new(doc_params)
+		if @document.save
 			flash[:success] = "The document was added!"
 			redirect_to root_path
 		else
-			render 'new'
+			render '_new'
 		end
 	end
 
@@ -21,6 +21,6 @@ class DocumentsController < ApplicationController
 	private
 
 	def doc_params
-		params.require(:document).permit(:doc, :title)
+		params.permit(:document)
 	end
 end
