@@ -28,7 +28,7 @@
 			</div>
 		<% end %>	
 		<h3>Send Message</h3>
-			<% if @users != current_user %>
+			<% if @users %>
 			  <% if current_user.is_admin? %>
 			  	
 			  	<%= @users.email %>
@@ -36,7 +36,7 @@
 
 			  <% else %>
 
-					<%= link_to "Talk To Neo", conversations_path(sender_id: current_user.id, recipient_id: @users = 5 ), method: 'post' %>
+					<%= link_to "Talk To Neo", conversations_path(sender_id: current_user.id, recipient_id: @users = 2 ), method: 'post' %>
 
 				<% end %>
 				<br>

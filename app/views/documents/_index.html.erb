@@ -1,0 +1,20 @@
+
+
+<div class="page-header"><h1>My Work</h1></div>
+
+<div class="media">
+  <% @documents.each_slice(2).each do |document_group| %>
+   <% document_group.each do |document, doc| %>
+
+    <div class="media-left">
+      <!-- Renders image -->
+      <%= link_to image_tag(document.doc.url, size:"108x152", class: "media-object"), document.doc.url, target: '_blank' %>
+      <%= link_to 'Remove', document_path(document), class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading"><%= document.title %></h4>
+    </div>
+    <% end %>
+ 
+  <% end %>
+</div>
