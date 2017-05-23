@@ -3,6 +3,7 @@
 
 
 
+
 #topnavbar {
 	background-color: #D1EEEE;
 	font-family: Old Standard TT;
@@ -37,15 +38,30 @@ of those sections to manage the look and feel of the site. */
 
 .intro-section {
     height: 100%;
-    padding-top: 0px;
-    text-align: center;
+    padding-top: 30px;
+    text-align: justify;
+    -moz-text-align-last: left;
+    text-align-last: left;
     background: #fff;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
 }
 
 .about-section {
-    height: 100%;
     text-align: center;
-    background: #eee;
+    background-image: url("script.jpg");
+    list-style: none;
+    background-repeat: no-repeat;
+    
+}
+
+.shadow4:before, .shadow4:after{
+  position:absolute;
+  content:"";
+  top:14px;bottom:14px;left:0;right:0;
+  box-shadow:0 0 25px 3px #548E7F;
+  border-radius:100px/10px;
+  z-index:-1;
 }
 
 .services-section {
@@ -58,6 +74,7 @@ of those sections to manage the look and feel of the site. */
     height: 100%;
     text-align: center;
     background: #eee;
+    
 }
 
 .conversation {
@@ -87,12 +104,15 @@ of those sections to manage the look and feel of the site. */
 
 .img-circle {
     borger-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     margin-bottom: 0;
-    margin-left: -22px;
+    margin-left: -20px;
     float: left;
     
 }
 
+#item-grid {
+    margin-top: 40px;
+}
 
