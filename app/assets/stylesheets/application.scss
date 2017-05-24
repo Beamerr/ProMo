@@ -1,17 +1,45 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
-
-
 #topnavbar {
-	background-color: #D1EEEE;
+	background-color: #bdffec;
 	font-family: Old Standard TT;
 }
 
 body {
     width: 100%;
     height: 100%;
+    overflow: auto;
+    position: relative;
+}
+
+body:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  display: block;
+  background-image: url(abstract.jpg);
+  opacity: 0.5;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(0px);
+}
+
+#text {
+  color: #e3f0f3;
+  
+  margin-bottom: 30px;
+  margin-left: -23px;
+  font-family: "Lucida Console";
+  padding: 15px;
 }
 
 html {
@@ -37,40 +65,49 @@ The padding is very important to make sure the scrollspy picks up the right area
 of those sections to manage the look and feel of the site. */
 
 .intro-section {
+    position: relative;
     height: 100%;
-    padding-top: 30px;
+    padding-bottom: 40px;
     text-align: justify;
     -moz-text-align-last: left;
     text-align-last: left;
-    background: #fff;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-
+    background: rgba(51, 146, 163, 0.7);
+    Border-radius: 110px 110px 110px 110px;
+    -moz-border-radius: 110px 110px 110px 110px;
+    -webkit-border-radius: 110px 110px 110px 110px;
+    Border: 0px solid #000000;
 }
 
-.about-section {
-    text-align: center;
-    background-image: url("script.jpg");
+.about-section {  
+    background: rgba(51, 146, 163, 0.7);
     list-style: none;
-    background-repeat: no-repeat;
-    
+    Border-radius: 110px 110px 110px 110px;
+    -moz-border-radius: 110px 110px 110px 110px;
+    -webkit-border-radius: 110px 110px 110px 110px;
+    Border: 0px solid #000000;
 }
 
-.shadow4:before, .shadow4:after{
-  position:absolute;
-  content:"";
-  top:14px;bottom:14px;left:0;right:0;
-  box-shadow:0 0 25px 3px #548E7F;
-  border-radius:100px/10px;
-  z-index:-1;
+.heading {
+    color: #e3f0f3;
+    position: absolute;
+    font-family: "Lucida Console";
+    margin-left: 210px;
+    margin-top: 3px;
 }
 
 .services-section {
+    position: relative;
     height: 100%;
-    text-align: center;
-    background: #fff;
+    background: rgba(51, 146, 163, 0.7);
+    Border-radius: 110px 110px 110px 110px;
+    -moz-border-radius: 110px 110px 110px 110px;
+    -webkit-border-radius: 110px 110px 110px 110px;
+    Border: 0px solid #000000;
+    
 }
 
 .contact-section {
+    
     height: 100%;
     text-align: center;
     background: #eee;
@@ -103,16 +140,30 @@ of those sections to manage the look and feel of the site. */
 }
 
 .img-circle {
+    display: block;
     borger-radius: 50%;
     width: 180px;
     height: 180px;
-    margin-bottom: 0;
-    margin-left: -20px;
+    margin-top: 4px;
+    margin-right: 10px;
     float: left;
+    left: 20px;
     
 }
 
 #item-grid {
-    margin-top: 40px;
+    margin-top: 30px;
 }
+
+#services {
+    color: #e3f0f3;
+    font-family: "Lucida Console";
+    
+}
+
+
+
+
+
+
 
