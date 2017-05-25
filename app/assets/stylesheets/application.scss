@@ -2,8 +2,8 @@
 @import "bootstrap";
 
 #topnavbar {
-	background-color: #bdffec;
-	font-family: Old Standard TT;
+	background-color: #d8fffb;
+	font-family: "PT serif";
 }
 
 body {
@@ -21,8 +21,8 @@ body:before {
   z-index: -1;
 
   display: block;
-  background-image: url(abstract.jpg);
-  opacity: 0.5;
+  background-image: url(graffiti.jpg);
+  opacity: 0.3;
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -38,7 +38,7 @@ body:before {
   
   margin-bottom: 30px;
   margin-left: -23px;
-  font-family: "Lucida Console";
+  font-family: "PT serif";
   padding: 15px;
 }
 
@@ -60,48 +60,51 @@ html {
     }
 }
 
-/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
-The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
-of those sections to manage the look and feel of the site. */
-
 .intro-section {
     position: relative;
     height: 100%;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     text-align: justify;
     -moz-text-align-last: left;
     text-align-last: left;
-    background: rgba(51, 146, 163, 0.7);
-    Border-radius: 110px 110px 110px 110px;
-    -moz-border-radius: 110px 110px 110px 110px;
-    -webkit-border-radius: 110px 110px 110px 110px;
+    background: rgba(93, 105, 124, 0.5);
+    Border-radius: 110px 0px 0px 0px;
+    -moz-border-radius: 110px 0px 110px 0px;
+    -webkit-border-radius: 110px 0px 110px 0px;
     Border: 0px solid #000000;
 }
 
 .about-section {  
-    background: rgba(51, 146, 163, 0.7);
+    background: rgba(93, 105, 124, 0.5);
     list-style: none;
-    Border-radius: 110px 110px 110px 110px;
-    -moz-border-radius: 110px 110px 110px 110px;
-    -webkit-border-radius: 110px 110px 110px 110px;
+    height: auto;
+    padding-bottom: 40px;
+    Border-radius: 110px 0px 0px 0px;
+    -moz-border-radius: 110px 0px 110px 0px;
+    -webkit-border-radius: 110px 0px 110px 0px;
     Border: 0px solid #000000;
+
 }
 
-.heading {
+
+
+#heading {
     color: #e3f0f3;
-    position: absolute;
-    font-family: "Lucida Console";
-    margin-left: 210px;
-    margin-top: 3px;
+    font-family: "PT serif";
+    margin-left: 192px;
+    margin-top: 18px;
+    margin-bottom: -20px;
+    text-shadow: 5px 5px 10px #919191;
+    
 }
 
 .services-section {
     position: relative;
     height: 100%;
-    background: rgba(51, 146, 163, 0.7);
-    Border-radius: 110px 110px 110px 110px;
-    -moz-border-radius: 110px 110px 110px 110px;
-    -webkit-border-radius: 110px 110px 110px 110px;
+    background: rgba(93, 105, 124, 0.5);
+    Border-radius: 110px 0px 110px 0px;
+    -moz-border-radius: 110px 0px 110px 0px;
+    -webkit-border-radius: 110px 0px 110px 0px;
     Border: 0px solid #000000;
     
 }
@@ -109,8 +112,13 @@ of those sections to manage the look and feel of the site. */
 .contact-section {
     
     height: 100%;
-    text-align: center;
-    background: #eee;
+    position: relative;
+    padding-bottom: 30px;
+    background: rgba(93, 105, 124, 0.5);
+    Border-radius: 110px 0px 110px 0px;
+    -moz-border-radius: 110px 0px 110px 0px;
+    -webkit-border-radius: 110px 0px 110px 0px;
+    Border: 0px solid #000000;
     
 }
 
@@ -129,10 +137,17 @@ of those sections to manage the look and feel of the site. */
 
 #convo {
     position: relative;
-    margin-left: auto;
-    margin-right: 30px;
+    margin-left: 60px;
+    width: 50%;
+    float: top left;
+    background: rgba(93, 105, 124, 0.5);
     text-align: center;
-    float: top;
+    
+}
+
+.panel > .panel-heading {
+    background: rgba(93, 105, 124, 0.5);
+
 }
 
 #contact #convo {
@@ -141,7 +156,7 @@ of those sections to manage the look and feel of the site. */
 
 .img-circle {
     display: block;
-    borger-radius: 50%;
+    border-radius: 50%;
     width: 180px;
     height: 180px;
     margin-top: 4px;
@@ -153,15 +168,42 @@ of those sections to manage the look and feel of the site. */
 
 #item-grid {
     margin-top: 30px;
-}
-
-#services {
-    color: #e3f0f3;
-    font-family: "Lucida Console";
     
 }
 
+#services {
+    position: relative;
+    color: #e3f0f3;
+    font-family: "PT serif";
+    text-shadow: 5px 5px 10px #919191;
+ 
+    
+}
 
+.progress {
+    height: 5px;
+
+}
+
+.progress-bar {
+    background-color: #2a4268 !important;
+}
+
+#progpos {
+    margin-top: 35px;
+    margin-bottom: 85px;
+}
+
+.introheader {
+    text-shadow: 5px 5px 10px #919191;
+}
+
+.messtitle {
+    position: absolute;
+    top: 0;
+    right: 80px;
+    
+}
 
 
 

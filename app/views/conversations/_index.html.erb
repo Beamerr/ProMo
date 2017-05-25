@@ -1,9 +1,10 @@
 
 <div class="row">
 	<div class="col-md-12">
-    <% unless @conversations.nil? %>
+	
+    <% if !@conversations.nil? %>
 			<div class="panel panel-default" id="convo">
-				<div class="panel-heading"><h3>Your conversations</h3></div>
+				<div class="panel-heading"><h3 id="convo">Your conversations</h3></div>
 					<div class="panel-body">
 						<div class="container">
 						  
@@ -26,14 +27,13 @@
 					</div>
 				</div>
 			</div>
-		<% end %>	
-		<h3>Send Message</h3>
+		<% end %>
+
+		<div class="messtitle"><h3>Send Message</h3>
 			<% if @users %>
 			  <% if current_user.is_admin? %>
-			  	
 			  	<%= @users.email %>
 				  <%= link_to "Send Message", conversations_path(sender_id: current_user.id, recipient_id: @users.id), method: 'post' %>
-
 			  <% else %>
 
 					<%= link_to "Talk To Neo", conversations_path(sender_id: current_user.id, recipient_id: @users = 2 ), method: 'post' %>
@@ -46,6 +46,7 @@
 
 			  <div><h5>Please sign in or register to talk to Neo now!</h5></div>
 
-			<% end %>	
+			<% end %>
+	    </div>	
 	</div>	
 </div>
