@@ -31,6 +31,6 @@ class DocumentsController < ApplicationController
 	private
 
 	def doc_params
-		params.permit(:document)
+		params.require(:document).permit(:doc, :title, :created_at, :updated_at, :doc_file_name, :doc_content_type, :doc_file_size, :doc_updated_at, :image_file_name, :image_content_type, :image_file_size, :image_updated_at)
 	end
 end

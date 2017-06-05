@@ -1,6 +1,7 @@
  <!-- Intro Section -->
 <br>
 <br>
+<br>
   <section id="intro" class="intro-section">
       <div class="container">
         
@@ -82,12 +83,15 @@
   <br>
 
   <section id="about" class="about-section">
-
-    <div class="col-lg-8 col-md-offset-2" id="heading"><h1>My Work</h1></div>
+    <div class="container" id="services">
+    <div class="col-lg-8 col-md-offset-2" id="progpos"><h1>My Work</h1></div>
 
     <%= render 'documents/index' %>
     <br>
     <%= render 'documents/new' %>
+
+    </div>
+  
       
   </section>
 
@@ -97,12 +101,13 @@
   <br>
   <!-- Contact Section -->
   <section id="contact" class="contact-section">
-                  <div class="col-lg-8 col-md-offset-2" id="services"><h1>Instant Messenger</h1></div>
-                  <%= render 'conversations/index' %>
-              </div>
-          </div>
-      </div>
+    <div class="container">
+                  
+    <%= render 'conversations/index' %>
+                
+    </div>
   </section>
+ 
 
   <br>
   <br>

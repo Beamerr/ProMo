@@ -1,9 +1,12 @@
 class Document < ApplicationRecord
 
-	require 'enumerator'
+	
 
-	has_attached_file :doc, styles: { thumb: "100x100#" }, default_url: "/assets/Ian Beamish CV2017png.png"
+	has_attached_file :doc, 
+    :path => ":rails_root/public/system/:attachment/:id/:style/:filename",
+    :url => "/system/:attachment/:id/:style/:filename", 
+	styles: { thumb: "100x100#" }
 
-  validates_attachment_content_type :doc, content_type: /\Aimage\/.*\Z/
+    validates_attachment_content_type :doc, content_type: /\Aimage\/.*\Z/
 
 end

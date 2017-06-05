@@ -1,5 +1,10 @@
 class PagesController < ApplicationController
-  
+   
+ 
+  def all_except(user)
+    where.not(id: user)
+  end
+
   def home
   	@documents = Document.order('created_at')
 
