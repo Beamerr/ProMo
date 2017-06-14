@@ -1,7 +1,7 @@
 <% if @users %>
   <% if current_user.is_admin? %>
 
-    <%= form_for @document, html: { multipart: true } do |f| %>
+    <%= form_for @document do |f| %>
       <% if @document.errors.any? %>
         <div id="error_explanation">
         

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170517044210) do
+ActiveRecord::Schema.define(version: 20170607090855) do
 
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id"
@@ -20,23 +20,19 @@ ActiveRecord::Schema.define(version: 20170517044210) do
   end
 
   create_table "documents", force: :cascade do |t|
-    t.string   "title"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.string   "doc_file_name"
     t.string   "doc_content_type"
     t.integer  "doc_file_size"
     t.datetime "doc_updated_at"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
+    t.integer  "user_id"
   end
 
   create_table "messages", force: :cascade do |t|
     t.text     "content"
     t.integer  "conversation_id"
-    t.integer  "user_id"          
+    t.integer  "user_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.index ["conversation_id"], name: "index_messages_on_conversation_id"

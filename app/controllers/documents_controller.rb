@@ -11,6 +11,9 @@ class DocumentsController < ApplicationController
 	def create
 	  @document = Document.new(doc_params)
 		if @document.save
+			params[:document][:doc].each do |d| #iterate over multiple attached files     
+            @document.create(doc: d)
+            end
 			flash[:success] = "The document was added!"
 			redirect_to root_path
 		else
@@ -31,6 +34,6 @@ class DocumentsController < ApplicationController
 	private
 
 	def doc_params
-		params.require(:document).permit(:doc, :title, :created_at, :updated_at, :doc_file_name, :doc_content_type, :doc_file_size, :doc_updated_at, :image_file_name, :image_content_type, :image_file_size, :image_updated_at)
+		params.require(:document).permit(:id, document: {doc: []})
 	end
 end
