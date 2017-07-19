@@ -1,0 +1,198 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#topnavbar {
+	background-color: #70A0AE;
+	font-family: "PT serif";
+}
+
+#nav-link {
+    color: #0B3C1F;
+}
+
+#nav-link:hover {
+    color: white;  
+}
+
+body {
+    
+    height: 100%;
+    width: 100%;
+    
+    
+}
+
+body:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-image: url(background.jpg);
+  opacity: 0.3;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(0px);
+}
+
+#text {
+
+  color: #e3f0f3;
+  margin-bottom: 30px;
+  margin-left: -23px;
+  font-family: "PT serif";
+  padding: 15px;
+
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.intro-section {
+    
+    position: relative;
+    height: 100%;
+    padding-bottom: 40px;
+    text-align: justify;
+    -moz-text-align-last: left;
+    text-align-last: left;
+    background: rgba(93, 105, 124, 0.5);
+    Border-radius: 110px 0px 0px 0px;
+    -moz-border-radius: 110px 0px 110px 0px;
+    -webkit-border-radius: 110px 0px 110px 0px;
+    
+}
+
+.about-section {  
+    
+    background: rgba(93, 105, 124, 0.5);
+    list-style: none;
+    padding-bottom: 40px;
+    Border-radius: 110px 0px 0px 0px;
+    -moz-border-radius: 110px 0px 110px 0px;
+    -webkit-border-radius: 110px 0px 110px 0px;
+    
+    
+
+}
+
+
+
+#heading {
+    color: #0B3C1F;
+    font-family: "PT serif";
+    text-shadow: 3px 3px 6px #919191;
+    
+}
+
+.services-section {
+    
+    height: 100%;
+    background: rgba(93, 105, 124, 0.5);
+    Border-radius: 110px 0px 110px 0px;
+    -moz-border-radius: 110px 0px 110px 0px;
+    -webkit-border-radius: 110px 0px 110px 0px;
+    padding-bottom: 50px;
+    
+}
+
+.contact-section {
+    
+    height: 100%;
+    background: rgba(93, 105, 124, 0.5);
+    Border-radius: 110px 0px 110px 0px;
+    -moz-border-radius: 110px 0px 110px 0px;
+    -webkit-border-radius: 110px 0px 110px 0px;
+    padding-bottom: 30px;
+    
+}
+
+.conversation {
+	color: #7f7f7f;
+	padding: 10px;
+}
+
+.conversation:hover, .conversation:focus {
+	background-color: #F4F4F5;
+}
+
+#textbox {
+    max-width: 658px;
+}
+
+#convo {
+    margin-top: 30px;
+    margin-left: 170px;
+    width: 50%;
+
+    position: relative;
+    background-color: #70A0AE;
+    text-align: center;
+
+    
+}
+
+
+.panel > .panel-heading {
+    background: rgba(93, 105, 124, 0.5);
+}
+
+
+
+.img-circle {
+    display: block;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    margin-top: 4px;
+    margin-right: 10px;
+    float: left;
+    left: 20px;
+}
+
+#item-grid {
+    margin-top: 30px; 
+    margin-left: -10px;
+}
+
+#services {
+    position: relative;
+    color: #e3f0f3;
+    font-family: "PT serif";
+    text-shadow: 5px 5px 10px #919191;
+}
+
+.progress {
+    height: 5px;
+    width: 96%;
+}
+
+.progress-bar {
+    background-color: #2a4268 !important;
+}
+
+#progpos {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.introheader {
+    text-shadow: 5px 5px 10px #919191;
+}
+
+
+
+
+
+
+

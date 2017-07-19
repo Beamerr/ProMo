@@ -1,0 +1,52 @@
+<div class="container" id="services">
+		<div class="col-lg-8 col-md-offset-2" id="progpos"><h1>Instant Messenger</h1>
+			<% if @users %>
+			  <% if current_user.is_admin? %>
+			    <% @users_in = User.all_except(current_user) %>
+			  	<% @users_in.each do |user| %>
+			  	<%= user.email %>
+				  <%= link_to "Send Message", conversations_path(sender_id: current_user.id, recipient_id: @users.id), method: 'post', class: "btn btn-primary" %><br><br/>
+				  <% end %>
+			  <% else %>
+
+					<%= link_to "Talk to Neo", conversations_path(sender_id: current_user.id, recipient_id: @users = 2 ), method: 'post', class: "btn btn-primary" %>
+
+				<% end %>
+				<br>
+			<% end %>
+			
+			<% if !user_signed_in? %>
+
+			  <div><p>Please <%= link_to " sign in", new_user_session_path %> or <%= link_to " register", new_user_registration_path %> to talk to Neo now!</p></div>
+
+			<% end %>
+	  </div>	
+	  </div>
+
+    <% if !@conversations.nil? %>
+			<div class="panel panel-default" id="convo">
+				<div class="panel-heading"><h3 id="services">Your conversations</h3></div>
+					<div class="panel-body">
+						<div class="container">
+						  
+								<% @conversations.each do |conversation| %>
+									<% other = conversation.sender == current_user ? conversation.recipient : conversation.sender %>
+
+									<%= link_to conversation_messages_path(conversation) do %>
+										<% if conversation.messages.count > 0 %>
+											<div class="col-md-2">
+												<%= other.email %><br>
+												<%= conversation.messages.last.message_time %>
+											</div>
+											<div class="col-md-8">
+												<%= conversation.messages.last.content %>
+											</div>
+										<% end %>
+									</div>
+								<% end %>
+							<% end %>	
+					</div>
+				</div>
+			</div>
+		<% end %>
+    
